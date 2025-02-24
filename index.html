@@ -67,6 +67,13 @@ window.onload = function() {
     - custom js link
   -->
   <script async src="./assets/js/script.js"></script>
+  <script>
+  fetch('https://bsdbs9w7vg.execute-api.us-east-1.amazonaws.com/count')
+    .then(response => response.text())
+    .then(count => {
+      document.getElementById('counter').textContent = count;
+    });
+</script>
 </head>
 
 <body>
